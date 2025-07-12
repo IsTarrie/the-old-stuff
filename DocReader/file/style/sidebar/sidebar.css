@@ -1,0 +1,56 @@
+#rd-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--rd-sidebar-width--);
+    height:100%;
+    background-color:var(--rd-sidebarC--);
+
+    transition: left 0.3s;
+    z-index: 1;
+}
+#rd-sidebar.hide{
+    left:calc( 0px - var(--rd-sidebar-width--) );
+    border: none;
+}
+#rd-article-list{
+    position: absolute;
+    top: var(--rd-control-height--);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--rd-control-height--));
+
+    overflow: auto;
+    scrollbar-width:thin;
+    scrollbar-color:var(--rd-defC--) var(--rd-sidebarC--);
+}
+
+#rd-article-list p{
+    user-select: none;
+    cursor: pointer;
+    margin: 4%;
+    padding: 4.5%;
+    background-color: var(--rd-sidebar-docs-b-color--);
+    border-radius: calc(var(--rd-sidebar-width--)/32);
+}
+#rd-article-list div{
+    margin: 4%;
+    padding: 4.5%;
+    border-left: 2px solid var(--rd-sidebar-docs-b-color--);
+}
+#rd-article-list div>text{
+    user-select: none;
+    cursor: pointer;
+    font-size: 85%;
+    color: var(--rd-midC--);
+}
+#rd-article-list div>text:hover{
+    color: var(--rd-defC-selected--);
+    text-decoration: underline;
+}
+#rd-article-list :hover:not(div,text){
+    background-color: var(--rd-defC-hover--);
+}
+#rd-article-list .selected:not(div){
+    background-color: var(--rd-defC-selected--);
+}

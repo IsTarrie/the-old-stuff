@@ -1,0 +1,23 @@
+:root{
+    --default-border-width--:2px;
+    --default-border-width2--:3px;
+    --default-nav-height--:3.5em;
+    --default-gradient--:linear-gradient(to right, rgb(0, 100, 255), rgb(255, 0, 180));/*此渐变色版权所有*/
+    --default-nav-height-hidden--:-3.5em;
+    --default-warning-color--:rgb(255, 0, 0);
+}
+div.avatar{
+    background-image: var(--default-gradient--);
+}body>*{
+    color: var(--foreground-color1--);
+}#content{
+    opacity: 1;
+    transition: opacity 0.5s;
+}#content[hidden]{
+    opacity: 0;
+}#content > div.errorMSG{
+    color:var(--default-warning-color--);
+}
+body{
+    transition: background-color 0.5s;
+}

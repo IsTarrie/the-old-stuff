@@ -1,0 +1,13 @@
+{
+    "/index.html":"/homePageData.json",
+    "/":"/homePageData.json",
+    "/copyright":"/copyright/copyright.json",
+    "/copyright/index.html":"/copyright/copyright.json",
+    "/copyright/":"/copyright/copyright.json",
+    "/log":"/log/log.json",
+    "/log/index.html":"/log/log.json",
+    "/log/":"/log/log.json",
+    "/log/reader":"/log/reader/reader.json",
+    "/log/reader/index.html":"/log/reader/reader.json",
+    "/log/reader/":"/log/reader/reader.json"
+}

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: white;
+}body *{
+    font-family: '阿里巴巴普惠体',Courier,sans-serif;
+    font-size: 1.1em;
+}header{
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+header>nav>button{
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+/*下边框的渐变色*/
+header > nav > button[isActive] {
+    position: relative; /* 使伪元素相对于按钮定位 */
+    padding-bottom: 1px; /* 添加一些底部内边距以容纳渐变 */
+}
+
+header > nav > button[isActive]::before {
+    content: ""; /* 必须定义内容为空字符串 */
+    position: absolute;
+    bottom: 0; /* 将渐变置于底部 */
+    left: 0;
+    width: 100%; /* 渐变宽度与按钮相同 */
+    height: 4px; /* 渐变的高度 */
+    background-image: linear-gradient(to right, rgb(0, 100, 255), rgb(255, 0, 180)); /* 渐变方向和颜色 */
+}/*渐变结束*/
+nav,body > footer{
+    margin: 0;
+    padding: 0.5em;
+    background-color:#eee;
+}body > footer{
+    font-size:0.2rem;
+    position: fixed;
+    bottom: 0em;
+    width: 100%;
+    text-align: center;
+}body > footer:hover{
+    font-size: medium;
+}
+a{
+    text-decoration: none;
+    color: rgb(127,50,217);
+}a:hover{
+    text-decoration:underline;
+    font-size: 200%;
+}body > footer,body > footer *{
+    /*过渡*/
+    transition: all 0.2s linear;
+}
+
+
+#main{
+    margin-top:4em;
+}#main article:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.25);
+    box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.25);
+}#main article.error:hover{
+    cursor:no-drop;
+    background-color: rgba(255, 0, 0,0.25);
+    box-shadow: 2px 2px 2px 1px rgba(255, 0, 0,0.25);
+}
+#main article{
+    font-size: medium;
+    border: 0.2em solid rgba(128, 128, 128, 0.25);
+    border-radius: 1em;
+    margin: 2%;
+    padding: 2%;
+}#main article h1{
+    font-size: 140%;
+}#main article h2{
+    font-size: 90%;
+}#main article time{
+    font-size: 100%;
+}#main article footer{
+    margin-top: 2%;
+    font-size: 80%;
+    text-align: right;
+    color: gray;
+}
+
+#main article.error{
+    border-width:0.35em;
+    border-color:red;
+}#main article.error h1{
+    color:red;
+}#main article.error h2{
+    color:blue;
+}#main article.error time{
+    color:rgb(0, 150, 255);
+}
+
+#isLoad{
+    color:#0f0;
+}

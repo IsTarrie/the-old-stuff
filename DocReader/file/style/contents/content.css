@@ -1,0 +1,23 @@
+#rd-contents{
+    background-color: var(--rd-bgc--);
+
+    position: fixed;
+    top: var(--rd-control-height--);
+    left: var(--rd-sidebar-width--);
+    height: 100%;
+    width: calc(100% - var(--rd-sidebar-width--));
+    overflow:auto;
+    scrollbar-width:thin;
+    scrollbar-color:var(--rd-defC--) var(--rd-sidebarC--);
+    transition: left 0.3s;
+    z-index: 0;
+}
+body:has(#rd-sidebar.hide) #rd-contents{
+    left:0;
+    width: 100%;
+}
+#rd-contents>div{
+    margin:0;
+    margin-bottom: var(--rd-control-height--);
+    padding:var(--rd-control-height--);
+}

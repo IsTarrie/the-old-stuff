@@ -1,0 +1,8 @@
+*{
+    margin: 0px;
+}
+#PageBody{
+    margin: 2%;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+}

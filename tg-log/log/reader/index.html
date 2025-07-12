@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = 'zh-CN'>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>动态阅读器</title>
+        <!--尚未加载时的临时样式-->
+        <style>
+            body{
+                background-color:white;
+            }@media (max-width: 400px){
+                body > *{
+                    display: none;
+                }
+            }
+        </style>
+        <noscript>
+            <style>
+                body{
+                    display: none;
+                }
+            </style>
+        </noscript>
+        <!--加载页面信息-->
+        <script src = '/loadData.js'></script>
+        <script>document.title = '加载模块需要一点时间,请耐心等待';loadData();/*alert('首次加载模块需要一点时间,请耐心等待');*/</script>
+    </head>
+    <body hidden>
+        <header>
+            <h1 id = 'title'></h1>
+            <h2 id = 'description'></h2>
+            <time id = 'date'></time>
+        </header>
+        <article id = 'content'>
+        </article>
+        <footer>版权所有 &copy 
+            <a href = 'https://space.bilibili.com/3493280864013042' title = '来B站找我玩呀' rel = 'noopener' target = '_blank'>Tab Cloud Green</a>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            <br>
+            <a href = '/copyright' title = '版权声明' target = '_blank'>阅读版权声明</a></footer>
+    </body>
+</html>

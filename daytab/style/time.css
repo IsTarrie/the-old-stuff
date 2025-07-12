@@ -1,0 +1,34 @@
+:root{
+    --time_carryLightColor--:yellow;/*这个变量后期会被JS更改*/
+    --time_other_margin--:0%;/*这个变量后期会被JS更改,创建这个变量时为了方便更改*/
+}
+#time{
+    display: table;
+    position: fixed;
+    font-family:'阿里巴巴普惠体',sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+}
+#time>div{
+    display: table-row;
+}
+#time>.time_other{
+    font-size:x-small;
+    text-align: center;
+}
+#time>.time_other>*{
+    margin:var(--time_other_margin--);
+}
+#time>.time_other>.ms{
+    font-weight:lighter;
+    font-size:xx-small;
+}
+#time>.time_other>.AMorPM{
+}
+#time span.light{
+    color:var(--time_carryLightColor--);
+}
+#time>*{
+    margin: 0;
+    padding: 0;
+}

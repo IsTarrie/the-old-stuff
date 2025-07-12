@@ -1,0 +1,4 @@
+#rd-controls svg{
+    stroke: var(--rd-defC--);
+    fill:var(--rd-defC--);
+}

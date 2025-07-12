@@ -1,0 +1,107 @@
+body >header nav{
+    width: 100%;
+    padding: 0 1em;
+    background-color: var(--background-color1--);
+    height: var(--default-nav-height--);
+}
+body > header nav.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*box-shadow: 0 1px 5px var(--foreground-color1-light);*/
+    z-index:1;
+}
+body > header nav ul{
+    display: inline;
+    margin: 0;
+    padding: 0.7em;
+    list-style: none;
+}
+body > header nav ul li{
+    display: inline-block;
+    margin: 1em;
+    font-family: 'Courier New', Courier, sans-serif;
+    border-bottom: var(--default-border-width--) solid rgba(255,255,255,0);/*先把位置预留着,以防后期发生不必要的变化*/
+}body > header nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--foreground-color1--);
+    padding: 0;
+}body > header nav ul li.home div.avatar{
+    display: inline-block;
+    vertical-align:-0.15em;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+}
+
+body > header nav ul li:hover{
+    color:var(--foreground-color2--);
+    border-bottom: var(--default-border-width--) solid var(--foreground-color2--);/*以border-botton作为悬浮样式*/
+}body > header nav ul li:hover a{
+    color:var(--foreground-color2--);
+}
+
+
+
+
+body{
+    /*padding-top: var(--default-nav-height--);*/
+    background-color: var(--background-color1--);
+    margin:0;
+}body > header nav.fixed{
+    box-shadow: none;
+    top:var(--default-nav-height-hidden--);
+    transition: top 0.5s;
+}body > header nav.fixed.loaded,body >header nav.fixed.show{
+    top:0;
+    box-shadow: 0 1px 5px var(--foreground-color1-light);
+}
+body:has(header nav.fixed.loaded),body:has(header nav.fixed.show){
+    padding-top: var(--default-nav-height--);/*在GoogleChorem中会出错*/
+}
+
+
+
+
+
+/*此处增加动画是为了避免AJAX异步加载导致的样式巨变对用户视力的伤害*/
+@keyframes fadeInBackgroundColor {
+    0% { background-color:white;}
+    100% { background-color: var(--background-color1--); }
+}
+body{
+    animation: fadeInBackgroundColor 1s ease-in-out forwards;
+    transition: background-color 2s;
+    transition: padding-top 0.5s;
+    background-color: var(--background-color1--);
+}
+body > header nav{
+    animation: fadeInBackgroundColor 1s ease-in-out forwards;
+}
+
+
+#content{
+    padding:8px;/*后期可以自行更改,这里添加只是为了好看*/
+}
+
+/*添加不同的显示模式*/
+body > header nav.hidden{
+    top:var(--default-nav-height-hidden--);
+}
+
+
+
+
+
+
+body > header nav.inline{
+    position:static;
+    top:0;
+    left:0;
+    box-shadow: 0 1px 5px var(--foreground-color1-light);
+    border-bottom-color: var(--foreground-color1-light);
+}body > header nav.inline.loaded,body >header nav.inline.show{
+    position: static;
+}

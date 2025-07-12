@@ -1,0 +1,7 @@
+canvas#gameCVS{
+    border: 0.65em solid rgb(0, 200, 255);
+    border-radius: 1em;
+    border-color:rgb(0, 200, 255);
+}body{
+    text-align: center;
+}

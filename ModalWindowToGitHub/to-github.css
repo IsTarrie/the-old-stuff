@@ -1,0 +1,158 @@
+#ModalWindowToGitHubButton{
+    position: fixed;
+}
+#ModalWindowToGitHub{
+    background-color: white;
+
+    user-select: none;
+    font-family: 宋体 sans-serif;
+    position: fixed;
+    border: 0.1em solid #888;
+    border-radius: 0.5em;
+    color: #888;
+    padding: 1%;
+    text-align: center;
+
+    font-size: 1.5em;
+    width: 300px;/*下方有依赖于此宽度的渐变,如需修改宽度,请一起更改*/
+}
+#ModalWindowToGitHub .github-user-img{
+    margin-top: 5%;
+    width: 90%;
+    height: auto;
+}
+#ModalWindowToGitHub p{
+    font-size: 100%;
+    padding: 0.1%;
+    margin: 0.1%;
+}
+#ModalWindowToGitHub p .github-user-name{
+    text-decoration: underline;
+    font-weight: bold;
+}
+#ModalWindowToGitHub p .github-user-name:hover{
+    cursor: pointer;
+    color: #00f;
+}
+#ModalWindowToGitHub p.data-label{
+    font-size:40%;
+    white-space: nowrap;
+}
+#ModalWindowToGitHub p.data-label span{
+
+    padding: 0 3%;
+
+    display: inline;
+    white-space: nowrap;
+}
+#ModalWindowToGitHub p.data-label :first-child{
+    border-right: 0.1em solid #888;
+    border-left:none;
+    padding-left:0;
+}
+#ModalWindowToGitHub p.data-label :last-child{
+    border-left: 0.1em solid #888;
+    border-right:none;
+    padding-right:0;
+}
+
+#ModalWindowToGitHub p.data{
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+#ModalWindowToGitHub p.data span{
+    margin: 0;
+    padding: 0 4.5%;
+    font-weight: bold;
+    font-size: 80%;
+    display: inline;
+    white-space: nowrap;
+/*
+    border-left: 0.05em solid #888;
+    border-right: 0.05em solid #888;
+*/
+}
+#ModalWindowToGitHub p.data span:first-child{
+    padding-left:0;
+    border-left:none;
+}
+#ModalWindowToGitHub p.data span:last-child{
+    padding-right:0;
+    border-right:none;
+}
+#ModalWindowToGitHub p.bio{
+    font-size: 75%;
+    border-top: 1px solid #888;
+}
+
+#ModalWindowToGitHubButton{
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+
+    top:1.5em;
+    right:1.5em;
+
+    width: 50px;/*下方有依赖于此宽度的渐变,如需修改宽度,请一起更改*/
+    height: 50px;
+
+    background-color: white;
+
+    border: 0.28em solid #888;
+    border-radius: 10px;
+
+    opacity: 1;
+    transition: all 400ms linear;
+}
+#ModalWindowToGitHubButton:hover{
+    border-color: #666;
+}
+#ModalWindowToGitHubButton.hide{
+    opacity: 0;
+    top: -50px;/*与高度一致*/
+}
+#ModalWindowToGitHubButton img{
+    width: 100%;
+    height: auto;
+}
+
+#ModalWindowToGitHub{
+    top:2em;
+    right:2em;
+
+    opacity: 1;
+    transition: all 400ms ease-in-out;
+}
+#ModalWindowToGitHub.hide{
+    opacity: 0;
+    right: -300px;/*与宽度一致*/
+}
+
+#ModalWindowToGitHub:not(.msg) .msgbox{
+    display: none;
+}
+#ModalWindowToGitHub.msg *:not(.msgbox,.close-button){
+    display: none;
+}
+#ModalWindowToGitHub .close-button{
+    cursor: pointer;
+
+    position: absolute;
+    top: 0.3em;
+    right: 0.3em;
+
+    border: none;
+    background-color: transparent;
+}
+
+
+
+#ModalWindowToGitHubButton.clear{
+    opacity: 0;
+}
+#ModalWindowToGitHub .close-button svg{
+    stroke: #888;
+    fill: #888;
+}

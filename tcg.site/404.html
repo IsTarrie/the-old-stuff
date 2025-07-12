@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='zh-CN'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>页面未找到-Tab.C.Green的个人网站</title>
+        <script src = '/script/default/loadData.js'></script>
+    </head>
+    <body>
+        <section id = 'content' data-title = '页面未找到-Tab.C.Green的个人网站'>
+            <link rel = 'stylesheet' href ='/style/errorPage/default.css'>
+            <link rel = 'stylesheet' href ='/style/errorPage/404.css'>
+            <script>
+                function insertHREF(el){
+                    let href = location.href;
+                    el.innerHTML = href;
+                    el.href = href;
+                }
+                if(document.readyState === 'loading'){
+                    window.addEventListener('DOMContentLoaded',()=>{
+                        insertHREF(document.getElementById('href-404'));
+                    });
+                }else{
+                    insertHREF(document.getElementById('href-404'));
+                }
+            </script>
+
+            <div id="errorPage" class="e-404">
+                <h1 class="HTTPCode">404</h1>
+                <h2 class="text">
+                    页面 <br> 
+                    <a href="" title="()" id = 'href-404'></a> <br> 
+                    未找到
+                </h2>
+                <button class="back" type = 'button' onclick="history.back();">返回上一页</button>
+            </div>
+
+        </section>
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab C Green的动态</title>
+    <link rel = 'icon' href = '/icon/homePage.png'>
+    <link rel = 'app-touch-icon' href = '/image/titleImage.png'>
+    <meta name = 'author' content = 'Tab Cloud Green'>
+    <meta name = 'email' content = 'Tab.Cloud.Green@outlook.com'>
+    <meta name = 'description' content = '我是Tab C Green,欢迎来看的动态'>
+    <meta name = 'keywords' content = 'Tab Cloud Green,动态,动态网站,个人网站'>
+
+    <meta property = 'og:title' content = 'Tab C Green的动态'>
+    <meta property = 'og:description' content = '我是Tab C Green,欢迎来看的动态'>
+    <meta property = 'og:image' content = '/image/titleImage.png'>
+    <!--尚未加载时的临时样式-->
+    <style>
+        body{
+            background-color:black;
+        }@media (max-width: 300px){
+            body > *{
+                display: none;
+            }
+        }
+    </style>
+    <noscript>
+        <style>
+            body{
+                display: none;
+            }
+        </style>
+    </noscript>
+    <!--加载页面信息-->
+    <script src = '/loadData.js'></script>
+    <script>document.title = '加载中';loadData();</script>
+</head>
+<body hidden>
+    <!-- 页面内容 -->
+    <div>
+        <header>
+            <nav></nav>
+
+            <img src = '/image/titleImage.png' alt = 'tg-log的logo' data-noSave>
+            <h2 class = 'myName'>我的笔名是
+                <span class = 'tab'>Tab</span>
+                <span class = 'cloud'>Cloud</span>
+                <span class = 'green'>Green</span>
+            </h2>
+            <h1>欢迎来看我的动态!</h1>
+            <button type = 'button' id = 'start'>开始吧!</button>
+        </header>
+        <div id = 'main'>
+            <article class = 'why'>
+                <h1>我为什么要开发这个</h1>
+                <p>
+                    原因很简单,因为B站的动态页面太拉了(没有侮辱的意思).
+                    <br>
+                    动态,是记录和发表的地方,需要能够支持文本,图片,链接.
+                    <br>
+                    当然,也不能有太多不相关的内容
+                    <br>
+                    在写下这些内容的前一天(<time datetime = '2024-8-14'>2024年8月14日 周四</time>),<br>我在自己清理B站动态中“不相关”的内容(视频的发布信息),<br>结果清完发现自己的视频都没了.我只好重新上传了一遍
+                    <br>
+                    看着混乱的动态页面,我很是无语.
+                    <br>
+                    我决心自己开发一个动态网站,此后只在此网站记录我的动态.
+                    <br>
+                    我打算使用*.md文件记录我的动态,因为这种格式编辑简单,而且符合我的预期.
+                    <br>
+                    因此,这个网站便诞生了
+                </p>
+            </article>
+        </div>
+        <footer>
+            版权所有 &copy 
+            <a href = 'https://space.bilibili.com/3493280864013042' title = '来B站找我玩呀' rel = 'noopener' target = '_blank'>Tab Cloud Green</a>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            <br>
+            <a href = '/copyright' title = '版权声明' target = '_blank'>阅读版权声明</a>
+        </footer>
+    </div>
+</body>

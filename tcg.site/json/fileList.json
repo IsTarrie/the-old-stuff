@@ -1,0 +1,17 @@
+{
+    "default":{
+        "script":[
+            "/script/default/ClassSite.js",
+            "/script/default/setByUserDeviceInfo.js",
+            "/script/jump/jump.js",
+            "/script/userFunctions/uf.js",
+            "/script/default/loadNav.js"
+        ],
+        "style":[
+            "/style/default/default.css",
+            "/style/default/navigator.css",
+            "/style/errorPage/load.css",
+            "/style/default/progress_loadPage.css"
+        ]
+    }
+}

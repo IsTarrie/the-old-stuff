@@ -1,0 +1,24 @@
+#rd-controls{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    margin:0;
+    padding:var(--rd-control-padding-tb--) var(--rd-control-padding-lr--);
+
+    z-index:3;
+}
+#rd-controls>button{
+    height: calc(var(--rd-control-height--) - var(--rd-control-padding-tb--)*2);
+    width: calc(var(--rd-control-height--) - var(--rd-control-padding-tb--)*2);
+    margin:0 var(--rd-control-button-margin-lr--);
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#rd-controls>button>svg{
+    margin: 0;
+    height: 100%;
+    width: auto;
+}

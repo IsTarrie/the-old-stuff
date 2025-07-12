@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: light){/*浅色主题*/
+    :root{
+        --rd-bgc--:#eee;
+        --rd-sidebarC--:#ddd;
+        --rd-topbarC--:#ddd;
+        --rd-color--:#111;
+        --rd-sidebar-docs-b-color--:rgba(170, 170, 170,0.28);
+    }
+}
+@media (prefers-color-scheme: dark){/*深色主题*/
+    :root{
+        --rd-bgc--:#222;
+        --rd-sidebarC--:#111;
+        --rd-topbarC--:#181818;
+        --rd-color--:#eee;
+        --rd-sidebar-docs-b-color--:rgb(85,85,85,0.12);
+    }
+}
+:root{
+    --rd-defC--:#fa0;
+    --rd-defC-hover--:rgba(250, 170, 0,0.2);
+    --rd-defC-selected--:rgba(250, 170, 0,0.65);
+    --rd-midC--:#888;
+}
+body{background-color: var(--rd-bgc--);
+color:var(--rd-color--)}
+::selection{
+background-color: var(--rd-defC-selected--);
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel = 'icon' href = 'https://tabsintcrtten.github.io/files/images/titimg.png'>
+        <title>BallGame</title>
+        <script>
+            window.onload = function (){
+                //连接游戏区域
+                var GameSection = document.getElementById('GameSection');
+                GameSection.width = window.innerWidth;
+                GameSection.height = window.innerHeight;
+                //连接角色--球
+                var Ball = document.getElementById('Ball');
+                var BallHeight = 30;
+                var BallWidth = 30;
+                Ball.style.backgroundColor = 'red';
+                Ball.style.width = '30px'
+                Ball.style.height = '30px';
+                Ball.style.position = 'fixed';
+                //初始化位置变量
+                var PaddleX =  0;
+                var PaddleY = window.innerHeight * 0.8;
+                var BallX = 0;
+                var BallY = 0;
+                var PaddleMove = 0;
+                var PaddleStep =  6;
+                var PaddleWidth = 200;
+                var BallMove = [+2,+2];
+                //连接角色--球拍
+                var Paddle = document.getElementById('Paddle');
+                Paddle.style.height = '30px';
+                Paddle.style.width = PaddleWidth + 'px';
+                Paddle.style.backgroundColor = 'green';
+                Paddle.style.position = 'fixed';
+                //设置游戏主程序
+                setInterval(function(){
+                    //刷新角色位置
+                    Paddle.style.left = PaddleX + 'px';
+                    Paddle.style.top = PaddleY + 'px';
+                    Ball.style.left = BallX + 'px';
+                    Ball.style.top = BallY + 'px';
+                    //判断手指移动
+                    document.onclick = function(e){
+                        var MouseX = e.clientX;
+                        if (MouseX > PaddleX + PaddleWidth){
+                            PaddleMove = 6;
+                        }if (MouseX < PaddleX){
+                            PaddleMove = -6;
+                        };
+                    };
+                    //移动球拍
+                    PaddleX += PaddleMove;
+                    if(PaddleX + PaddleWidth < 0){
+                        PaddleX = window.innerWidth;
+                    }if(PaddleX > window.innerWidth){
+                        PaddleX = 0 - PaddleWidth;
+                    }
+                    //移动球
+                    BallX += BallMove[0];
+                    BallY += BallMove[1];
+                    if(BallY + BallHeight >= PaddleY && (BallX + BallWidth < PaddleX  + PaddleWidth|| BallX > PaddleX)){
+                        alert('')
+                        //这里还有东西要写
+                    }
+                },0);
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 'GameSection'>
+            <div id = 'Ball' style = 'border: 1px solid red;'></div>
+            <div id = 'Paddle' style = 'border: 1px solid green;'></div>
+        </div>
+    </body>
+</html>

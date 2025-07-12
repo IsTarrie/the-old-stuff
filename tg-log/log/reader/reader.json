@@ -1,0 +1,4 @@
+{
+    "style":["/style/logPage/style.css","/style/reader/reader.css"],
+    "script":["https://cdn.jsdelivr.net/npm/marked/marked.min.js","/script/logReader/reader.js"]
+}

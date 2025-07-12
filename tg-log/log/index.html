@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = 'zh-CN'>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>加载中</title>
+        <!--尚未加载时的临时样式-->
+        <style>
+            body{
+                background-color:white;
+            }@media (max-width: 400px){
+                body > *{
+                    display: none;
+                }
+            }
+        </style>
+        <noscript>
+            <style>
+                body{
+                    display: none;
+                }
+            </style>
+        </noscript>
+        <!--加载页面信息-->
+        <script src = '/loadData.js'></script>
+        <script>loadData();</script>
+    </head>
+    <body hidden>
+        <header>
+            <nav>
+                
+                <button type = 'button' id = 'byTime' isActive>按时间</button>
+                <button type = 'button' id = 'byKeywords'>按关键词</button>
+                <span id = 'isLoad'>加载中……</span>
+            </nav>
+        </header>
+        <div id = 'main'>
+
+<!--
+            <article data-code = 1>
+                <h1>我的日志</h1>
+                <h2>我的日志的简介</h2>
+                <footer>
+                    <time datetime = '2024'>发布日期</time>
+                </footer>
+            </article>
+-->
+
+        </div>
+        <footer>
+            版权所有 &copy 
+            <a href = 'https://space.bilibili.com/3493280864013042' title = '来B站找我玩呀' rel = 'noopener' target = '_blank'>Tab Cloud Green</a>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            <br>
+            <a href = '/copyright' title = '版权声明' target = '_blank'>阅读版权声明</a>
+        </footer>
+    </body>
+</html>

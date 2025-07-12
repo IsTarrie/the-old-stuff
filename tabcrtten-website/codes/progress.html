@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>进度条游戏</title>
+        <meta charset = 'utf-8'>
+        <link rel='icon' href = '../files/images/titimg.png'>
+        <script>
+            if(screen.width < 450 && screen.height < 750){
+                alert('屏幕太小，不适合进行游戏');
+                window.close();
+            }
+            else{
+                if(window.innerWidth < 500 && window.innerHeight < 500){
+                    window.alert('浏览器窗口太小，请修改');
+                    location.reload();
+                };
+            };
+            window.onload = function(){
+                var progress = document.getElementById('progress');
+                var text = document.getElementById('text');
+                var ExitButton = document.getElementById('ExitButton');
+                ExitButton.onclick = function(){
+                    if(progress.value < progress.max){
+                        if(confirm('目标未达成，确定要退出吗？')){
+                            window.close();
+                        }else{
+                            false;
+                        };
+                    };
+                };
+                document.onmousemove = function(event){
+                    progress.value += 5;
+                    text.style.position = 'fixed';
+                    text.style.left = event.clientX + 'px';
+                    text.style.top = event.clientY + 'px';
+                    if(progress.value >= progress.max){
+                        alert('目标达成！');
+                        alert('你居然真的成功了，太闲了吧。');
+                        alert('别总是看屏幕，眼睛会受损的。');
+                        alert('就到这吧，拜拜！');
+                        window.close();
+                    };
+                };
+                setInterval(function(){
+                    progress.value -= 1;
+                    if(progress.value <= 0){
+                        progress.value = 0;
+                    }
+                },0)
+                
+            };
+            
+        </script>
+    </head>
+    <body style = 'background-image: url("../files/images/代码雨.gif");background-repeat: repeat;'>
+        <progress max = 10000 value = 1 id = 'progress' style = 'width: 100%;'></progress>
+        <p style = 'color: #0f0; font-size: xx-large;' id = 'text'>
+            请不停的移动鼠标，<br>让进度条前进，<br>否则进度会回落。
+        </p>
+        <button id = 'ExitButton' style = 'position: fixed;right: 0;bottom: 0;'>退出游戏</button>
+    </body>
+</html>

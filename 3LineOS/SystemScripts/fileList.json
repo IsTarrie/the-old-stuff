@@ -1,0 +1,7 @@
+{
+    "JSfiles":[
+        "core/mainUpdate.js",
+        "core/sysINIT/loadWorkers.js",
+        "core/API/loadAPI.js"
+    ]
+}

@@ -1,0 +1,17 @@
+#content div#errorPage.e-404{
+    background-color: var(--background-color1--light--);
+    margin: 5%;
+    margin-top: 5%;
+    padding: 1em;
+
+    border-radius: 1em;
+}
+#content div#errorPage.e-404 > h1.HTTPCode{
+    color:var(--foreground-color1-light);
+    font-size: xx-large;
+    text-align: center;
+}#content div#errorPage.e-404 > h2.text{
+    color:var(--foreground-color1--);
+    text-align: center;
+    font-size: x-large;
+}

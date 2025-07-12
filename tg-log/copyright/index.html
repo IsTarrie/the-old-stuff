@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>加载中</title>
+        <!--尚未加载时的临时样式-->
+        <style>
+            body{
+                background-color:black;
+            }@media (max-width: 500px){
+                body > *{
+                    display: none;
+                }
+            }
+        </style>
+        <noscript>
+            <style>
+                body{
+                    display: none;
+                }
+            </style>
+        </noscript>
+        <!--加载页面信息-->
+        <script src = '/loadData.js'></script>
+        <script>loadData();</script>
+    </head>
+    <body hidden>
+        <div>
+            <header>
+                <nav></nav>
+                <h2>TG-log网站</h2>
+                <h1>版权声明</h1>
+            </header>
+            <div id = 'main'>
+                <article class = 'copyright'>
+                    <h2>拒绝废话</h2>
+                    <h1>以下是受到版权所保护的项目清单,包括但不限于</h1>
+
+                    <ul class = 'copyList'>
+                        <li>此网站的主页背景渐变色</li>
+                        <li>此网站所有图标</li>
+                        <li>此网站所有项目文件</li>
+                        <li>动态中的内容</li>
+                    </ul>
+
+                    <h1>以下是允许转载的内容清单,包括但不限于</h1>
+
+                    <ul>
+                        <li>动态中的内容,但必须明确标注出处</li>
+                        <li>网页中的文本,但必须明确标注出处</li>
+                    </ul>
+                </article>
+            </div>
+            <footer>
+                版权所有 &copy 
+                <a href = 'https://space.bilibili.com/3493280864013042' title = '来B站找我玩呀' rel = 'noopener' target = '_blank'>Tab Cloud Green</a>
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </footer>
+        </div>
+    </body>
+</html>

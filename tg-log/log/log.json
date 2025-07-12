@@ -1,0 +1,6 @@
+{
+    "title":"Tab C Green的动态",
+    "icon":"/icon/homePage.png",
+    "style":["/style/logPage/style.css","/style/smallFooter.css"],
+    "script":["https://cdn.jsdelivr.net/npm/marked/marked.min.js","/script/homePage/noSave.js","/script/logPage/loadLog.js","/script/logPage/turnToLog.js"]
+}

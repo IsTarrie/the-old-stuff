@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang='zh-CN'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tab.C.Green的个人网站</title>
+        <meta name='description' content='Tab.C.Green的个人网站'>
+        <meta name = 'og:title' content = '你好呀,我是Tab.C.Green'>
+        <meta name = 'og:description' content = '欢迎来找我玩!'>
+        <script src = '/script/default/loadData.js'></script>
+    </head>
+    <body>
+        <section id = 'content' data-title = 'Tab.C.Green的个人网站' data-page = 'default'>
+            <script>
+                site_UF = new Object();
+                site_UF.turnToHome = function(){
+                    history.replaceState(null, null,'/welcome');
+                    Site.loadPage('/home');
+                }
+            </script>
+        </section>
+    </body>
+</html>

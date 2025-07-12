@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+}header{
+    background-color: rgb(0, 240, 255);
+    text-align: center;
+    font-size: xx-large;
+}footer{
+    color:rgb(0, 240, 255);
+    background-color: rgb(0, 50, 255);
+}
+#APPname{
+    color:rgb(0, 50, 255);
+    text-shadow: 8px;
+}
+button{
+    border: 2px solid rgb(0, 50, 255);
+    border-radius: 5px;
+    background-color: rgb(0, 240, 255);
+}button:active{
+    border: 2px solid rgb(0, 240, 255);
+    background-color:rgba(0,0,0,0);
+}#draggable{
+    border: 3px solid rgb(0, 50, 255);
+}

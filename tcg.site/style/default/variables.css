@@ -1,0 +1,11 @@
+:root{
+    --foreground-color1--:black;
+    --foreground-color1-light:gray;
+    --background-color1--light--:#eee;
+    --foreground-color2--:rgb(0, 100, 255);
+    --background-color1--:white;
+    /*--default-border-width--:2px;
+    --default-nav-height--:3.5em;
+    --default-nav-height-hidden--:-3.5em;
+    --default-warning-color--:rgb(255, 0, 0);*/
+}

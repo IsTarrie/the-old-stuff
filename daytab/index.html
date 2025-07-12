@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    
+        <title>新标签页</title>
+        <meta name = 'title' content="DayTab"></meta>
+        <meta name = 'description' content = 'DayTab新标签页'></meta>
+        <meta name = 'author' content = 'https://github.com/TabGreen'></meta>
+        <meta name = 'application' content = 'DayTab'></meta>
+
+        <meta name = 'og:title' content = 'DayTab'></meta>
+        <meta name = 'og:description' content = 'DayTab新标签页'></meta>
+
+        <link rel="stylesheet" href="style/style.css"></link>
+        <link rel="stylesheet" href="style/time.css"></link>
+
+        <!--提前来完成初始化设置,包括用户设置,CSS变量等-->
+        <script src = 'script/variables.js'></script>
+        <script src = 'script/loadSettings.js'></script>
+        <!--CSS 变量初始化-->
+        <script src = 'script/style/carryLight.js'></script>
+    </head>
+    <body>
+        <div id = 'time'>
+            <div class = 'time_main'>
+                <span class =  'hour'></span>
+                <span class =  'min'></span>
+                <span class =  'sec'></span>
+            </div>
+            <div class = 'time_other'>
+                <span class = 'AMorPM'></span>
+                <span class = 'date'></span>
+                <span class =  'day'></span>
+                <span class =  'ms'></span>
+            </div>
+        </div>
+        <canvas id = 'cvs'></canvas>
+        <script src = 'script/time.js'></script>
+    </body>
+</html>

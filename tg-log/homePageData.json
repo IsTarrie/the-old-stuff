@@ -1,0 +1,6 @@
+{
+    "title":"Tab C Green的动态",
+    "icon":"/icon/homePage.png",
+    "style":["/style/homePage/style.css"],
+    "script":["/script/homePage/noSave.js","/script/homePage/start.js"]
+}

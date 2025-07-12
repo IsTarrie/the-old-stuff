@@ -1,0 +1,22 @@
+#content:has(#errorPage){
+    margin: 0;
+    padding: 0;
+}#content div#errorPage a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--foreground-color2--);
+    cursor:no-drop;
+    border-bottom: var(--default-border-width2--) solid rgba(0,0,0,0);
+}#content div#errorPage a:hover{
+    border-color: var(--foreground-color2--);
+}#content div#errorPage{
+    text-align: center;
+}#content div#errorPage button.back{
+    background-color: transparent;
+    background-image: var(--default-gradient--);
+    border-color: var(--foreground-color1--);
+    color:var(--background-color1--);
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+}

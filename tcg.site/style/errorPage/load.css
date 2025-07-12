@@ -1,0 +1,5 @@
+@import url('/style/errorPage/default.css');
+@import url('/style/errorPage/403.css');
+@import url('/style/errorPage/404.css');
+@import url('/style/errorPage/500.css');
+@import url('/style/errorPage/503.css');

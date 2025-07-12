@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>FunnyButton</title>
+        <link rel = 'icon' href = '../files/images/titimg.png'>
+        <link rel = 'stylesheet' href = '../files/css/backgroundimage.css'>
+        <style>
+            table{
+                border: 1px solid green;
+                border-radius: 5px;
+                background-color: #0f0;
+            }
+            th{
+                border: 1px solid #0f0;
+                background-color: green;
+            }
+            td{
+                border: 1px solid green;
+                background-color: #0f0;
+            }
+        </style>
+        <script>
+            var Code = 0;
+            var code = 31;
+            window.onload = function(){
+                var button = document.getElementById('addtext');
+                var table = document.getElementById('texttable');
+                document.onmousemove = function(event){
+                    button.style.position = 'fixed';
+                    button.style.left = event.clientX + 'px';
+                    button.style.top = event.clientY + 'px';
+                };
+                //button.onclick = 
+                setInterval(function(){
+                    var TableRow = document.createElement('tr');
+                    var TD1 = document.createElement('td');
+                    var TD2 = document.createElement('td');
+                    var Text = String.fromCharCode(Code);
+                    TD1.innerHTML = Code;
+                    TD2.innerHTML = Text;
+                    TableRow.appendChild(TD1);
+                    TableRow.appendChild(TD2);
+                    table.appendChild(TableRow);
+                    delete TableRow,TD1,TD2,Text;
+                    Code += 1;
+                },0)
+            };
+        </script>
+    </head>
+    <body>
+        <table id = 'texttable'>
+            <tr>
+                <th>CharCode</th>
+                <th>Text</th>
+            </tr>
+        </table>
+        <button id = 'addtext'>+AddText✍️</button>
+    </body>
+</html>

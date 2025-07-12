@@ -1,0 +1,45 @@
+header{
+    position: relative;
+    font-size: x-large;
+    background-color: #eee;
+    padding: 2%;
+    margin-bottom: 1em;
+    width: 100%;
+}div#fill{
+    height:100%;
+}
+header h2{
+    font-size: 65%;
+}
+header time{
+    font-size: 55%;
+    color:gray;
+    margin-left: 5%;
+}img{
+    height: 30%;
+    width: 30%;
+    transition: all 0.2s linear;
+}img.full{
+    height: 100%;
+    width: 100%;
+}article#content{
+    margin: 5%;
+}
+
+article a{
+    font-size: 96%;
+    text-decoration: none;
+    color: blue;
+    text-decoration:underline;
+}article a:hover{
+    color: rgba(0, 0, 255,0.5);
+    font-size: 100%;
+}body > footer a{
+    text-decoration: none;
+    color: rgb(127,50,217);
+}body > footer a:hover{
+    text-decoration:underline;
+    font-size: 200%;
+}article em{
+    color:aqua;
+}

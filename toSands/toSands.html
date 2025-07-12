@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>toSands</title>
+        <link rel = 'stylesheet' href = 'toSands.css'>
+        <script src = 'toSands.js'></script>
+        <script src = 'files/nowTime.js'></script>
+    </head>
+    <body>
+        <header>
+            <span id = 'APPname'>toSands</span>:Turn your images into sands<br>
+            <div><label>Upload image files<input type = 'file' id = 'fileInput' accept="image/png"></label>
+                <div id = 'draggable'>Drag images here</div>
+            </div>
+        </header>
+        <canvas id = 'CV'></canvas>
+        <footer>
+            <div id = 'progress' hidden>
+                <span id = 'message'></span>
+                <progress id = 'PROG'></progress>
+            </div>
+            <div id = 'download' hidden>
+                <button id = 'downloadButton'>download</button>
+            </div>
+            <div>copyright &copy; Tab•Crtten <time class = 'NOW'></time></div>
+        </footer>
+    </body>
+</html>

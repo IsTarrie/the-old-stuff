@@ -1,0 +1,1 @@
+const updateTime = 10;

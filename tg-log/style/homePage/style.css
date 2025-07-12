@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(to right, rgb(0, 100, 255), rgb(255, 0, 180));
+}body *{
+    font-family: '阿里巴巴普惠体',Courier,sans-serif;
+}body>div,article,article ul{
+    border: 0.5em solid rgb(127,50,217);
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 5%;
+}article.why{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+header,article,footer{
+    text-align: center;
+}
+header .myName span.tab{
+    color: rgba(0,0,0,0.6);
+}header .myName span.cloud{
+    color: rgba(255, 255, 255, 0.6);
+}header .myName span.green{
+    color: #0f0;
+}footer a{
+    text-decoration:none;
+    color: rgb(127,50,217);
+}
+
+article ul{
+    list-style-type: none;
+    text-align: center;
+}button#start{
+    border: 0.2em solid rgb(127,50,217);
+    border-radius: 0.4em;
+    border-color:rgb(0, 100, 255) rgb(255, 0, 180) rgb(255, 0, 180) rgb(0, 100, 255);
+    font-size: xx-large;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: none;
+    /*添加渐变*/
+    transition: all 0.2s linear;
+}button#start:hover{
+    color: rgb(127,50,217);
+    border-color: rgb(255, 0, 180) rgb(0, 100, 255) rgb(0, 100, 255) rgb(255, 0, 180) ;
+    background-image: linear-gradient(to left, rgb(0, 100, 255), rgb(255, 0, 180));
+}button#start:active{
+    transition:none;
+    color: rgb(127,50,217);
+    border-color:rgb(127,50,217);
+    background-color:rgb(127,50,217);
+    background-image:none;
+}

@@ -1,0 +1,14 @@
+#rd-article-title{
+    position: fixed;
+    top:var(--rd-control-padding-tb--);
+    left:var(--rd-sidebar-width--);
+    width:calc(100% - var(--rd-sidebar-width--));
+    text-align: center;
+    z-index: 2;
+
+    transition: left 0.3s,width 0.3s;
+}
+body:has(#rd-sidebar.hide) #rd-article-title{
+    left:0;
+    width:100%;
+}
